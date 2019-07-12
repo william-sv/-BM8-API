@@ -38,14 +38,14 @@ public function getToken($token_value, $length = 7)
 - Response
 ```json
 {
-	t: 5, 
-	list: [
-		{
-			"i": 0,
-			"bl": 3,
-			"bbl": 0 
-		}
-	]
+    "t": 5, 
+    "list": [
+        {
+	    "i": 0,
+	    "bl": 3,
+	    "bbl": 0 
+	}
+    ]
 }
 ```
 | Key  | 值   | 类型  | 释义             |
@@ -68,9 +68,9 @@ public function getToken($token_value, $length = 7)
 - Params
 ```json
 {
-	"line": "z",
-	"id": "333969",
-	"token": "GLDLDJI55C5586k="
+    "line": "z",
+    "id": "333969",
+    "token": "GLDLDJI55C5586k="
 }
 ```
 | 参数  | 值   | 类型   | 释义                     |
@@ -94,9 +94,9 @@ public function getToken($token_value, $length = 7)
 - Params 
 ```json
 {
-	"line": "x",
-	"id": "78a",
-	"token": "MDNHGMIDBDF7K6k="
+    "line": "x",
+    "id": "78a",
+    "token": "MDNHGMIDBDF7K6k="
 }
 
 ```
