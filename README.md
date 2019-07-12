@@ -21,60 +21,91 @@ public function getToken($token_value, $length = 7)
 
 ##### 获取当前线路车辆情况
 - URL: http://gzbus.bm8.com.cn/ajax.php
-- Type: POST
+- Method: POST
 - Params
 ```json
 {
-	"line": "c", // 固定值
-	"id": "3770" // 线路名
+	"line": "c",
+	"id": "3770",
 	"token": "KFJDJJG040F782k="
 }
 ```
+| 参数  | 值   | 类型   | 释义   |
+| ----- | ---- | ------ | ------ |
+| line  | c    | String | 固定值 |
+| id    |      | String | 线路名 |
+| token |      | String | Token  |
 - Response
 ```json
 {
-	t: 5, //在图中的车辆数
+	t: 5, 
 	list: [
 		{
-			"i": 0,//当前站点序号（0 - n）
-			"bl": 3,//正在当前站点的车辆
-			"bbl": 0 // 已当前站点已过车辆
+			"i": 0,
+			"bl": 3,
+			"bbl": 0 
 		}
 	]
 }
 ```
+| Key  | 值   | 类型  | 释义             |
+| ---- | ---- | ----- | ---------------- |
+| t    |      | int   | 正在途中的车辆数 |
+| list |      | Array | 车辆数据         |
+
+###### List内的数据
+| Key  | 值   | 类型 | 释义                |
+| ---- | ---- | ---- | ------------------- |
+| i    |      | int  | 当前站点序号（0-n） |
+| bl   |      | int  | 正在当前站点的车辆  |
+| bbl  |      | int  | 已当前站点已过车辆  |
+
 <hr>
 
 ##### 获取当前线路 X 站点的车辆情况
 - URL: http://gzbus.bm8.com.cn/ajax.php 
-- Type: POST 
+- Method: POST 
 - Params
 ```json
 {
-	"line": "z", // 固定值
-	"id": "333969", // 当前线路当前站点编号
+	"line": "z",
+	"id": "333969",
 	"token": "GLDLDJI55C5586k="
 }
 ```
+| 参数  | 值   | 类型   | 释义                     |
+| ----- | ---- | ------ | ------------------------ |
+| line  | z    | String | 固定值                   |
+| id    |      | String | 当前线路中当前站点的编号 |
+| token |      | String | Token                    |
+
 - Response
 ```html
 <button  class="am-btn am-btn-primary">1分 2站<br/>粤A22**7D</button><button  class="am-btn am-btn-primary">23分 13站<br/>粤A06**1D</button><button  class="am-btn am-btn-primary">31分 17站<br/>粤A05**9D</button>
 ```
 
+
 <hr>
+
 
 ##### 检索线路
 - URL: http://gzbus.bm8.com.cn/ajax.php 
-- Type: POST 
+- Method: POST 
 - Params 
 ```json
 {
-	"line": "x", // 固定值
-	"id": "78a", // 需要检索的线路名
+	"line": "x",
+	"id": "78a",
 	"token": "MDNHGMIDBDF7K6k="
 }
 
 ```
+| 参数  | 值   | 类型   | 释义   |
+| ----- | ---- | ------ | ------ |
+| line  | x    | String | 固定值 |
+| id    |      | String | 线路名 |
+| token |      | String | Token  |
+
 - Response
 ```html
 <ul class="s_l"><li title='天河智慧城核心区（高唐）总站 => 天河北公交总站'><a href='/line/3770.html'>78A线</a></li></ul>
