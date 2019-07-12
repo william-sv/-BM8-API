@@ -3,7 +3,7 @@
 
 ##### token 算法
 ```php
-	$token_string_1 = 'ABCDEFGHIJKLMN'; // 固定值
+    $token_string_1 = 'ABCDEFGHIJKLMN'; // 固定值
     $token_string_2 = 'ABCDEFGHIJKLMN0123456789'; // 固定值
     $token_string_3 = 'k='; // 固定值
 	public function getToken($token_value, $length = 7)
